@@ -1,0 +1,13 @@
+tr.nested-fields
+  td = f.input :number
+  td = f.input :threshold
+  td
+    table.gift_positions.table
+      tbody
+        = f.simple_fields_for :gift_positions do |p|
+          = render 'gift_position_fields', f: p
+        tr
+          td colspan='2'
+            = link_to_add_association 'Добавить подарок', f, :gift_positions, 'data-association-insertion-traversal' => 'closest', 'data-association-insertion-node' => 'tr', 'data-association-insertion-method' => 'before'
+  td
+    = link_to_remove_association 'Удалить категорию', f

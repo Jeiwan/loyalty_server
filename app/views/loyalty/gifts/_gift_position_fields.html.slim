@@ -1,0 +1,6 @@
+tr.nested-fields
+  - if f.object.persisted?
+    td = f.object.product_name
+  - else
+    td = f.input :product_id, label:false, input_html: { class: 'gift_position_search' }
+  td = link_to_remove_association 'Удалить подарок', f

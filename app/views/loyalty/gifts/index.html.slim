@@ -1,0 +1,22 @@
+h1 Подарки
+
+.well
+  = link_to 'Редактировать', edit_gift_path(@gift), class: 'btn btn-default'
+
+table.table
+  thead
+    tr
+      th Категория приза
+      th Сумма накопления на карте
+      th Название призовой позиции
+  tbody
+    - @gift.gift_categories.each do |category|
+      tr
+        td = "#{category.number} категория"
+        td = category.threshold
+        td
+          table.table.table-condensed.table-striped
+            tbody
+              - category.gift_positions.each do |position|
+                tr
+                  td = position.product_name

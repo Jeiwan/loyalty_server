@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Loyalty
+    = stylesheet_link_tag 'loyalty/application', media: 'all'
+    = javascript_include_tag 'loyalty/application'
+    = csrf_meta_tags
+  body
+    = navigation_bar
+    .container
+      = flash_messages
+      = yield

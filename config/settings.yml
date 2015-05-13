@@ -1,0 +1,6 @@
+loyalty:
+  family_money_box:
+    charge_threshold: 500
+    certificate_uuid: '0d0abef9-43c5-4a8a-be46-adae4b8824d5'
+    #certificate_uuid: '37db356c-0e58-11e3-8726-f23c91df23bd'
+    certificate_sum: 2000

@@ -1,0 +1,49 @@
+ru:
+  loyalty:
+    hello: 'world'
+  activerecord:
+    models:
+      loyalty/card: 'Карта лояльности'
+      loyalty/certificate: 'Сертификат'
+      loyalty/gift: 'Подарок'
+      loyalty/gift_category: 'Категория подкара'
+      loyalty/gift_position: 'Позиция подкара'
+      loyalty/purchase: 'Продажа'
+      loyalty/purchase_position: 'Позиция продажи'
+      loyalty/transaction: 'Транзакция'
+    attributes:
+      loyalty/card:
+        number: 'Номер'
+        balance: 'Остаток'
+        status:
+          inactive: 'Не активирована'
+          active: 'Активирована'
+          deactivated: 'Деактивирована'
+          blocked: 'Заблокирована'
+      loyalty/certificate:
+        number: 'Номер'
+        status:
+          inactive: 'Не активирован'
+          initiated: 'Инициирован'
+          active: 'Активирован'
+          used: 'Использован'
+        pin_code: 'Код активации'
+      loyalty/gift_category:
+        number: 'Номер'
+        threshold: 'Мин. сумма'
+      loyalty/purchase:
+        sum: 'Сумма'
+        paid_by_bonus: 'Списано'
+        cashbox: 'Касса'
+        is_return: 'Возврат'
+        status:
+          initiated: 'Инициирована'
+          registered: 'Подтверждена'
+          cancelled: 'Отменена'
+      loyalty/purchase_position:
+        quantity: 'Количество'
+        price: 'Цена'
+        sum: 'Сумма'
+      loyalty/transaction:
+        kind: 'Тип'
+        sum: 'Сумма'

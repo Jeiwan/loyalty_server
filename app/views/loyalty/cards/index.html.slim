@@ -1,0 +1,15 @@
+h1 Карты лояльности
+
+.well
+  = link_to 'Загрузить из файла', '#upload_file_block', class: 'btn btn-default', data: { toggle: 'collapse' }
+  #upload_file_block.collapse
+    p
+      strong Формат файла:&nbsp;
+      span .txt, список, по одному номеру карты на каждой строке
+    = form_tag upload_cards_path, multipart: true, id: 'upload_cards'
+      = file_field_tag 'file', accept: 'text/plain', id: 'file_to_upload'
+      .form-actions
+        = submit_tag 'Загрузить', class: 'btn btn-default'
+
+#cards_table_filter
+table#cards_table

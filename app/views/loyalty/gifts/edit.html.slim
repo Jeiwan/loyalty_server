@@ -1,0 +1,15 @@
+h1 Редактироваие подарков
+
+.well
+  = link_to 'Назад к списку подарков', gifts_path, class: 'btn btn-default'
+
+= simple_form_for @gift do |f|
+  table.gift_categories.table
+    tbody
+      = f.simple_fields_for :gift_categories do |c|
+        = render 'gift_category_fields', f: c
+      tr
+        td colspan='4'
+          .links
+            = link_to_add_association 'Добавить категорию', f, :gift_categories, 'data-association-insertion-traversal' => 'closest', 'data-association-insertion-node' => 'tr', 'data-association-insertion-method' => 'before'
+  = f.submit 'Сохранить', class: 'btn btn-primary'
